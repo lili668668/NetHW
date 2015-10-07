@@ -1,11 +1,3 @@
-body {
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-	background-color: white;
-	text-align: center;
-}
-
-h1 {
-	font-family: 'Microsoft JhengHei','PT Sans Narrow','Source Han Sans TWHK',sans-serif;
+#tempImg {
+	.size(400px, 300px);
 }
