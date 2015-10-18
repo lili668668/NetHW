@@ -1,0 +1,47 @@
+圖片轉文字JS(V)
+導航列固定化JS(X)
+視差滾動JS(X)(photon)
+
+gmae
+接食物(X)
+塔防(V)
+翻牌(V)
+照片拼圖(XX)
+
+home
+--------------
+[introduction
+grow]
+[photo
+video]
+game
+
+home:
+skroll.js
+首頁圖層(固定)
+次頁圖層(至頂固定)
+主內容圖層(浮動)
+
+introduction:
+區塊
+grow:
+書狀
+photo:
+reveal.js
+video:
+sequence.js+meny.js
+game:
+nothing
+
+<!-- <video controls>
+								<source src="video/123.ogv" type="video/ogg">
+								<source src="video/123.mp4" type="video/mp4">
+							</video> -->
+							
+							
+background-size: cover;
+	background-attachment: fixed;
+	-webkit-transform: translateZ(0);
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: -500;
