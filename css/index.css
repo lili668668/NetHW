@@ -9,7 +9,7 @@ body {
 	height: 100%;
 	margin: 0 auto;
 	position: relative;
-	z-index: -500;
+	z-index: -5000;
 }
 
 * {
@@ -46,14 +46,13 @@ div.homeNav a {
 
 div.straght1 {
 	position: fixed;
-	-webkit-transform: translateZ(0);
 	background-color: #595959;
 	top: 0%;
 	width: 100%;
 	margin: 0px auto;
 	border: 0px;
 	text-align: center;
-	z-index: 10;
+	z-index: 60;
 }
 
 li.index {
@@ -63,15 +62,17 @@ li.index {
 	color: white;
 }
 
-a.index {
-	text-decoration: blink;
-	font-family: "微軟正黑體";
-	color: white;
-	font-size: 35px;
+a.index img {
+	padding :0px;
+	border: 0px;
+	margin: 0px;
+	height: 50px;
+	width: 50px;
 }
 
 img.index {
 	height: 50px;
+	width: 50px;
 }
 
 
@@ -86,10 +87,9 @@ div.footer{
 .fixed-bg {
 	background-size: cover;
 	background-attachment: fixed;
-	-webkit-transform: translateZ(0);
 	background-repeat: no-repeat;
 	background-position: center center;
-	z-index: -500;
+	min-height: 100%;
 }
 
 /* .fixed-bg:before {
@@ -105,6 +105,7 @@ div.footer{
 } */
 
 .block {
+	z-index: 50;
 	width: 100%;
 	height: 500px;
 	background-color: rgba(0, 0, 0, 0);
@@ -112,6 +113,7 @@ div.footer{
 
 /*content*/
 div.content {
+	z-index: 50;
 	position: relative;
 	display: table;
 	width: 100%;

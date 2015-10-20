@@ -47,49 +47,49 @@ $(document).ready(function(){
 	$("a#HTgame").hide();
 	$("a#HTfb").hide();
 	$("img#pthome").hover(function(){
-		$(this).hide(100);
-		$("a#tithome").show(100);
+		$(this).hide();
+		$("a#tithome").show();
 	});
 	$("a#tithome").hover(function(){
 	}, function(){
-		$(this).hide(100);
-		$("img#pthome").show(100);
+		$(this).hide();
+		$("img#pthome").show();
 	});
 	$("img#ptgrow").hover(function(){
-		$(this).hide(100);
-		$("a#titgrow").show(100);
+		$(this).hide();
+		$("a#titgrow").show();
 	});
 	$("a#titgrow").hover(function(){
 	}, function(){
-		$(this).hide(100);
-		$("img#ptgrow").show(100);
+		$(this).hide();
+		$("img#ptgrow").show();
 	});
 	$("img#ptphoto").hover(function(){
-		$(this).hide(100);
-		$("a#titphoto").show(100);
+		$(this).hide();
+		$("a#titphoto").show();
 	});
 	$("a#titphoto").hover(function(){
 	}, function(){
-		$(this).hide(100);
-		$("img#ptphoto").show(100);
+		$(this).hide();
+		$("img#ptphoto").show();
 	});
 	$("img#ptgame").hover(function(){
-		$(this).hide(100);
-		$("a#titgame").show(100);
+		$(this).hide();
+		$("a#titgame").show();
 	});
 	$("a#titgame").hover(function(){
 	}, function(){
-		$(this).hide(100);
-		$("img#ptgame").show(100);
+		$(this).hide();
+		$("img#ptgame").show();
 	});
 	$("img#ptfb").hover(function(){
-		$(this).hide(100);
-		$("a#titfb").show(100);
+		$(this).hide();
+		$("a#titfb").show();
 	});
 	$("a#titfb").hover(function(){
 	}, function(){
-		$(this).hide(100);
-		$("img#ptfb").show(100);
+		$(this).hide();
+		$("img#ptfb").show();
 	});
 	$("img#HPgrow").hover(function(){
 		$(this).hide();
@@ -129,7 +129,7 @@ $(document).ready(function(){
 	});
 	
 	// 導覽行的出現消失
-	/*$("div.straght1").hide();
+	$("div.straght1").hide();
 	$(window).scroll(function(){
 		var $HomeHeight = $("#home").height()-100;
 		var $ScrollTop = $(this).scrollTop();
@@ -138,7 +138,7 @@ $(document).ready(function(){
 		} else {
 			$("div.straght1").fadeOut("fast");
 		}
-	});*/
+	});
 	
 	// introduction的特殊效果
 	$("#introduction").hover(function(){
@@ -151,7 +151,7 @@ $(document).ready(function(){
 	});
 	
 	// grow的特殊效果
-	/*$(".forkit").hide();
+	$(".forkit").hide();
 	$(window).scroll(function(){
 		var $HomeHeight = $("#home").height()-100;
 		var $GrowHeight = $("#home").height() + $("#introduction-grow").height() - 300;
@@ -161,5 +161,5 @@ $(document).ready(function(){
 		} else {
 			$(".forkit").fadeOut("fast");
 		}
-	});*/
+	});
 });
