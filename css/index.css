@@ -269,11 +269,31 @@ video {
 	max-width: 75%;
 }
 
+/*photo*/
 #photo {
 	float: left;
 	position: relative;
 	width: 50%;
 	height: 600px;
+}
+
+.slide {
+	padding: 0px;
+	margin: 0px;
+	border: 10px;
+	border-style: solid;
+	border-color: gray;
+	border-radius: 20%;
+	width: 90%;
+	height: 80%;
+	left: 10%;
+}
+
+#slides {
+	clear: both;
+	width: 90%;
+	height: 80%;
+	display: block;
 }
 
 #photo-video {
