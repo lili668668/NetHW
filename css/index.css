@@ -16,6 +16,7 @@ body {
   font-family: 'Microsoft JhengHei','PT Sans Narrow','Source Han Sans TWHK',sans-serif;
   color: #006F24;
   text-align: center;
+  text-decoration: blink;
 }
 
 /*nav*/
@@ -187,6 +188,7 @@ div.text li {
 	position: relative;
 	width: 50%;
 	height: 600px;
+	cursor: pointer;
 }
 
 #grow {
@@ -261,6 +263,10 @@ div.text li {
 	color: gray;
 	height: 90px;
 	position: relative;
+}
+
+a.video-footer:hover {
+	background-color: gray;
 }
 
 video {

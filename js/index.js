@@ -147,7 +147,7 @@ $(document).ready(function(){
 		$(this).css({"background-color":"white"});
 	});
 	$("#introduction").click(function(){
-		window.open("#", "_self");
+		window.open("introduction.html", "_self");
 	});
 	
 	// grow的特殊效果
@@ -165,7 +165,7 @@ $(document).ready(function(){
 	
 	// photo的特殊效果
 	$("#slides").cycle({
-		fx: "fade",
+		fx: "shuffle",
 		timeout: 7200,
 		random: 1
 	});
