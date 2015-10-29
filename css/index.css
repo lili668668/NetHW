@@ -269,6 +269,7 @@ video {
 	width: 90%;
 	height: 80%;
 	left: 10%;
+	cursor: pointer;
 }
 
 #slides {

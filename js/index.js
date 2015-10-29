@@ -126,8 +126,12 @@ $(document).ready(function(){
 	
 	// photo的特殊效果
 	$("#slides").cycle({
-		fx: "shuffle",
+		fx: "fade",
 		timeout: 7200,
 		random: 1
+	});
+	
+	$(".slide").click(function(){
+		window.open("photo.html","_self");
 	});
 });
