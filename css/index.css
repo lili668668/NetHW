@@ -22,27 +22,15 @@ body {
 /*nav*/
 div.homeNav {
 	position: absolute;
-	width: 100%;
 	bottom: 10%;
-	text-align: center;
 }
 
-div.homeNav * {
-	display: inline-block;
-}
-
-div.homeNav img, a img {
-	height: 80px;
-	width: 80px;
-	margin-left: 50px;
-	margin-right: 50px;
-}
-
-div.homeNav a {
-	font-size: 50px;
-	text-decoration: blink;
-	font-family: "微軟正黑體";
-	color: white;
+img.hmnav {
+	height: 8%;
+	width: 8%;
+	margin-left: 40px;
+	margin-right: 40px;
+	cursor: pointer;
 }
 
 div.straght1 {
@@ -56,24 +44,12 @@ div.straght1 {
 	z-index: 60;
 }
 
-li.index {
-	display: inline;
-	margin: 30px;
-	font-family: "微軟正黑體";
-	color: white;
-}
-
-a.index img {
-	padding :0px;
-	border: 0px;
-	margin: 0px;
-	height: 50px;
-	width: 50px;
-}
-
 img.index {
-	height: 50px;
-	width: 50px;
+	cursor: pointer;
+	height: 3%;
+	width: 3%;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 
 

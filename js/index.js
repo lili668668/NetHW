@@ -1,131 +1,92 @@
 $(document).ready(function(){
 	// 下滑
-	$("a#tithome").click(function(){
+	$("#pthome").click(function(){
 		$("html,body").animate({
 			scrollTop: $("#home").offset().top
 		},900);
 	});
-	$("a#titgrow").click(function(){
+	$("#ptgrow").click(function(){
 		$("html,body").animate({
 			scrollTop: $("#introduction-grow").offset().top - 70
 		},900);
 	});
-	$("a#titphoto").click(function(){
+	$("#ptphoto").click(function(){
 		$("html,body").animate({
 			scrollTop: $("#photo-video").offset().top - 100
 		},900);
 	});
-	$("a#titgame").click(function(){
+	$("#ptgame").click(function(){
 		$("html,body").animate({
 			scrollTop: $("#game").offset().top - 100
 		},900);
 	});
-	$("a#HTgrow").click(function(){
+	$("#ptfb").click(function(){
+		window.open("https://www.facebook.com/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%92%BD%E8%92%BD%E5%A7%90%E5%A7%90%E5%B0%8F%E5%A4%A9%E4%BD%BF%E5%A7%86%E5%A7%86%E5%A6%B9%E5%A6%B9-772331202830916/?fref=ts", "_self");
+	});
+	$("#HTgrow").click(function(){
 		$("html,body").animate({
 			scrollTop: $("#introduction-grow").offset().top - 70
 		},900);
 	});
-	$("a#HTphoto").click(function(){
+	$("#HTphoto").click(function(){
 		$("html,body").animate({
 			scrollTop: $("#photo-video").offset().top - 100
 		},900);
 	});
-	$("a#HTgame").click(function(){
+	$("#HTgame").click(function(){
 		$("html,body").animate({
 			scrollTop: $("#game").offset().top - 100
 		},900);
+	});
+	$("#HTfb").click(function(){
+		window.open("https://www.facebook.com/%E5%A4%A9%E7%AB%BA%E9%BC%A0%E8%92%BD%E8%92%BD%E5%A7%90%E5%A7%90%E5%B0%8F%E5%A4%A9%E4%BD%BF%E5%A7%86%E5%A7%86%E5%A6%B9%E5%A6%B9-772331202830916/?fref=ts", "_self");
 	});
 	
-	// 導覽航的圖文變換
-	$("a#tithome").hide();
-	$("a#titgrow").hide();
-	$("a#titphoto").hide();
-	$("a#titgame").hide();
-	$("a#titfb").hide();
-	$("a#HTgrow").hide();
-	$("a#HTphoto").hide();
-	$("a#HTgame").hide();
-	$("a#HTfb").hide();
-	$("img#pthome").hover(function(){
-		$(this).hide();
-		$("a#tithome").show();
-	});
-	$("a#tithome").hover(function(){
+	// 導覽航的變換
+	$("#pthome").hover(function(){
+		$(this).attr("src","picture/home7(6)2.png");
 	}, function(){
-		$(this).hide();
-		$("img#pthome").show();
+		$(this).attr("src","picture/home7(6).png");
 	});
-	$("img#ptgrow").hover(function(){
-		$(this).hide();
-		$("a#titgrow").show();
-	});
-	$("a#titgrow").hover(function(){
+	$("#ptgrow").hover(function(){
+		$(this).attr("src","picture/drink1422.png");
 	}, function(){
-		$(this).hide();
-		$("img#ptgrow").show();
+		$(this).attr("src","picture/drink142.png");
 	});
-	$("img#ptphoto").hover(function(){
-		$(this).hide();
-		$("a#titphoto").show();
-	});
-	$("a#titphoto").hover(function(){
+	$("#ptphoto").hover(function(){
+		$(this).attr("src","picture/movie942.png");
 	}, function(){
-		$(this).hide();
-		$("img#ptphoto").show();
+		$(this).attr("src","picture/movie94.png");
 	});
-	$("img#ptgame").hover(function(){
-		$(this).hide();
-		$("a#titgame").show();
-	});
-	$("a#titgame").hover(function(){
+	$("#ptgame").hover(function(){
+		$(this).attr("src","picture/controller2.png");
 	}, function(){
-		$(this).hide();
-		$("img#ptgame").show();
+		$(this).attr("src","picture/controller.png");
 	});
-	$("img#ptfb").hover(function(){
-		$(this).hide();
-		$("a#titfb").show();
-	});
-	$("a#titfb").hover(function(){
+	$("#ptfb").hover(function(){
+		$(this).attr("src","picture/facebok(5)2.png");
 	}, function(){
-		$(this).hide();
-		$("img#ptfb").show();
+		$(this).attr("src","picture/facebok(5).png");
 	});
-	$("img#HPgrow").hover(function(){
-		$(this).hide();
-		$("a#HTgrow").show();
-	});
-	$("a#HTgrow").hover(function(){
+	$("#HTgrow").hover(function(){
+		$(this).attr("src","picture/drink1422.png");
 	}, function(){
-		$(this).hide();
-		$("img#HPgrow").show();
+		$(this).attr("src","picture/drink142.png");
 	});
-	$("img#HPphoto").hover(function(){
-		$(this).hide();
-		$("a#HTphoto").show();
-	});
-	$("a#HTphoto").hover(function(){
+	$("#HTphoto").hover(function(){
+		$(this).attr("src","picture/movie942.png");
 	}, function(){
-		$(this).hide();
-		$("img#HPphoto").show();
+		$(this).attr("src","picture/movie94.png");
 	});
-	$("img#HPgame").hover(function(){
-		$(this).hide();
-		$("a#HTgame").show();
-	});
-	$("a#HTgame").hover(function(){
+	$("#HTgame").hover(function(){
+		$(this).attr("src","picture/controller2.png");
 	}, function(){
-		$(this).hide();
-		$("img#HPgame").show();
+		$(this).attr("src","picture/controller.png");
 	});
-	$("img#HPfb").hover(function(){
-		$(this).hide();
-		$("a#HTfb").show();
-	});
-	$("a#HTfb").hover(function(){
+	$("#HTfb").hover(function(){
+		$(this).attr("src","picture/facebok(5)2.png");
 	}, function(){
-		$(this).hide();
-		$("img#HPfb").show();
+		$(this).attr("src","picture/facebok(5).png");
 	});
 	
 	// 導覽行的出現消失
