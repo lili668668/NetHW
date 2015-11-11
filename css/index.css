@@ -1,292 +1,393 @@
 /*other*/
 html{
-	width: 100%;
+    width: 100%;
     height: 100%;
 }
 
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
-	position: relative;
-	z-index: -5000;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: -5000;
 }
 
 * {
-  font-family: 'Microsoft JhengHei','PT Sans Narrow','Source Han Sans TWHK',sans-serif;
-  color: #006F24;
-  text-align: center;
-  text-decoration: blink;
+    font-family: 'Microsoft JhengHei','PT Sans Narrow','Source Han Sans TWHK',sans-serif;
+    color: #006F24;
+    text-align: center;
+    text-decoration: blink;
 }
 
 /*nav*/
 div.homeNav {
-	position: absolute;
-	bottom: 10%;
+    position: absolute;
+    bottom: 10%;
 }
 
 img.hmnav {
-	height: 8%;
-	width: 8%;
-	margin-left: 40px;
-	margin-right: 40px;
-	cursor: pointer;
+    max-height: 8%;
+    max-width: 8%;
+    margin-left: 40px;
+    margin-right: 40px;
+    cursor: pointer;
 }
 
 div.straght1 {
-	position: fixed;
-	background-color: #595959;
-	top: 0%;
-	width: 100%;
-	margin: 0px auto;
-	border: 0px;
-	text-align: center;
-	z-index: 60;
+    position: fixed;
+    background-color: #595959;
+    top: 0%;
+    width: 100%;
+    margin: 0px auto;
+    border: 0px;
+    text-align: center;
+    z-index: 60;
 }
 
 img.index {
-	cursor: pointer;
-	height: 3%;
-	width: 3%;
-	margin-right: 20px;
-	margin-left: 20px;
+    cursor: pointer;
+    max-height: 3%;
+    max-width: 3%;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 
 div.footer{
-	position: relative;
-	display: table;
-	width: 100%;
-	background-color: #595959;
+    position: relative;
+    display: table;
+    width: 100%;
+    background-color: #595959;
 }
 
 /*fixed-bg*/
 .fixed-bg {
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center center;
-	min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100%;
 }
 
 .block {
-	z-index: 50;
-	width: 100%;
-	height: 500px;
-	background-color: rgba(0, 0, 0, 0);
+    z-index: 50;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /*content*/
 div.content {
-	z-index: 50;
-	position: relative;
-	display: table;
-	width: 100%;
+    z-index: 50;
+    position: relative;
+    display: table;
+    width: 100%;
     height: 100%;
-	text-align: center;
+    text-align: center;
 }
 
 div.content h1 {
-	font-size: 80px;
+    font-size: 80px;
 }
 
 div.content h2 {
-	font-size: 50px;
+    font-size: 50px;
 }
 
 div.content h3 {
-	font-size: 25px;
+    font-size: 25px;
 }
 
 div.content h4 {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 div.content h5 {
-	font-size: 15px;
+    font-size: 15px;
 }
 
 div.content h6 {
-	font-size: 10px;
+    font-size: 10px;
 }
 
 div.content p {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 /*text*/
 div.text * {
-	text-align: left;
+    text-align: left;
 }
 
 div.text {
-	display: inline-block;
-	margin: 30px;
-	background-color: rgba(0, 0, 0, 0);
-	padding-left: 40px;
-	padding-right: 40px;
+    display: inline-block;
+    margin: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 div.text li {
-	font-size: 15px;
+    font-size: 15px;
 }
 
 /*background*/
 #home {
     background-image: url(../photo/fix/p1.png);
-	/* background-repeat: no-repeat;
-	background-size: cover; */
 }
 
 #home h1,#home h2,#home h3,#home h4,#home h5,#home h6,#home p {
-	color: white;
+    color: white;
 }
 
 #introduction-grow {
-	background-color: white;
-	height: 600px;
+    background-color: white;
+    height: 600px;
 }
 
 #introduction {
-	float: left;
-	position: relative;
-	width: 50%;
-	height: 600px;
-	cursor: pointer;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 600px;
+    cursor: pointer;
 }
 
 #grow {
-	float: left;
-	position: relative;
-	width: 50%;
-	height: 600px;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 600px;
 }
+
+.button {
+    cursor: pointer;
+    font-size: x-large;
+    border-style: solid;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: rgba(128,128,128, 0.7);
+}
+
 
 /*video*/
 #video {
-	float: left;
-	position: relative;
-	width: 50%;
-	height: 600px;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 600px;
 }
 
 .video-block-groupl {
-	float: left;
-	position: relative;
-	height: 600px;
-	width: 60px;
+    float: left;
+    position: relative;
+    height: 600px;
+    width: 60px;
 }
 
 .video-block-groupr {
-	float: right;
-	position: relative;
-	height: 600px;
-	width: 60px;
+    float: right;
+    position: relative;
+    height: 600px;
+    width: 60px;
 }
 
 .video-block {
-	float: top;
-	border-style: solid;
-	border-width: 15px;
-	color: gray;
-	height: 30px;
-	width: 30px;
-	position: relative;
+    float: top;
+    border-style: solid;
+    border-width: 15px;
+    color: gray;
+    height: 30px;
+    width: 30px;
+    position: relative;
 }
 
 .video-main-group {
-	position: relative;
-	height: 600px;
+    position: relative;
+    height: 600px;
 }
 
 .video-main-group * {
-	color: gray;
+    color: gray;
 }
 
 .video-title {
-	top: 0px;
-	border-top-style: solid;
-	border-bottom-style: solid;
-	border-top-width: 15px;
-	border-bottom-width: 15px;
-	color: gray;
-	height: 150px;
-	position: relative;
+    top: 0px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-width: 15px;
+    border-bottom-width: 15px;
+    color: gray;
+    height: 150px;
+    position: relative;
 }
 
 .video-content {
-	position: relative;
-	height: 300px;
+    position: relative;
+    height: 300px;
 }
 
 .video-footer {
-	border-top-style: solid;
-	border-bottom-style: solid;
-	border-top-width: 15px;
-	border-bottom-width: 15px;
-	color: gray;
-	height: 90px;
-	position: relative;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-width: 15px;
+    border-bottom-width: 15px;
+    color: gray;
+    height: 90px;
+    position: relative;
 }
 
 a.video-footer:hover {
-	background-color: gray;
+    background-color: gray;
 }
 
 video {
-	position: relative;
-	max-height: 100%;
-	max-width: 75%;
+    position: relative;
+    max-height: 100%;
+    max-width: 75%;
 }
 
 /*photo*/
 #photo {
-	float: left;
-	position: relative;
-	width: 50%;
-	height: 600px;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 600px;
 }
 
 .slide {
-	padding: 0px;
-	margin: 0px;
-	border: 10px;
-	border-style: solid;
-	border-color: gray;
-	border-radius: 20%;
-	width: 90%;
-	height: 80%;
-	left: 10%;
-	cursor: pointer;
+    padding: 0px;
+    margin: 0px;
+    border: 10px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 20%;
+    max-width: 90%;
+    max-height: 80%;
+    left: 10%;
+    cursor: pointer;
 }
 
 #slides {
-	clear: both;
-	width: 90%;
-	height: 80%;
-	display: block;
+    clear: both;
+    width: 90%;
+    height: 80%;
+    display: block;
 }
 
 #photo-video {
-	background-color: white;
-	height: 600px;
+    background-color: white;
+    height: 600px;
 }
 
 #game {
-	background-color: white;
-	height: 600px;
+    background-color: white;
+    height: 600px;
 }
 
 #subLayout1 {
-	background-image: url(../photo/fix/p7.jpg);
-	/* background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed; */
+    background-image: url(../photo/fix/p7.jpg);
 }
 
 #subLayout2 {
-	background-image: url(../photo/fix/p8.jpg);
-	/* background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed; */
+    background-image: url(../photo/fix/p8.jpg);
+}
+
+/*mobile media*/
+@media only screen and (max-width: 960px) {
+    video {
+        position: relative;
+        max-height: 100%;
+        max-width: 70%;
+    }
+    div.straght1 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    div.block {
+        display: none;
+    }
+    #introduction {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        cursor: pointer;
+    }
+    
+    #grow {
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+    #photo {
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+    #video {
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+    div#home>h1 {
+        font-size: 50px;
+    }
+    div#home>h3 {
+        font-size: 20px;
+    }
+    img.hmnav {
+        max-height: 8%;
+        max-width: 8%;
+        margin-left: 20px;
+        margin-right: 20px;
+        cursor: pointer;       
+    }
+    div.homeNav {
+        position: absolute;
+        bottom: 10%;
+        left: 20%;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:450px) {
+    div.homeNav {
+        position: absolute;
+        bottom: 10%;
+        left: 15%;
+        text-align: left;
+    }
+    div.content h2 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    img.hmnav {
+        max-height: 8%;
+        max-width: 8%;
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;       
+    }
+    div.homeNav {
+        position: absolute;
+        bottom: 10%;
+        left: 10%;
+        text-align: left;
+    }  
+    video {
+        display: none;
+    }
+    div.text {
+        display: none;
+    }
 }

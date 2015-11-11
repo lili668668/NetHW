@@ -90,16 +90,20 @@ $(document).ready(function(){
 	});
 	
 	// 導覽行的出現消失
-	$("div.straght1").hide();
-	$(window).scroll(function(){
-		var $HomeHeight = $("#home").height()-100;
-		var $ScrollTop = $(this).scrollTop();
-		if ($ScrollTop > $HomeHeight) {
-			$("div.straght1").fadeIn("fast");
-		} else {
-			$("div.straght1").fadeOut("fast");
-		}
-	});
+    if ($("body").width() < 960) {
+        $("div.straght1").hide();
+    } else {
+        $("div.straght1").hide();
+        $(window).scroll(function(){
+            var $HomeHeight = $("#home").height()-100;
+            var $ScrollTop = $(this).scrollTop();
+            if ($ScrollTop > $HomeHeight) {
+                $("div.straght1").fadeIn("fast");
+            } else {
+                $("div.straght1").fadeOut("fast");
+            }
+        });
+    }
 	
 	// introduction的特殊效果
 	$("#introduction").hover(function(){
@@ -109,19 +113,6 @@ $(document).ready(function(){
 	});
 	$("#introduction").click(function(){
 		window.open("introduction.html", "_self");
-	});
-	
-	// grow的特殊效果
-	$(".forkit").hide();
-	$(window).scroll(function(){
-		var $HomeHeight = $("#home").height()-100;
-		var $GrowHeight = $("#home").height() + $("#introduction-grow").height() - 300;
-		var $ScrollTop = $(this).scrollTop();
-		if ($ScrollTop > $HomeHeight && $ScrollTop < $GrowHeight) {
-			$(".forkit").fadeIn("fast");
-		} else {
-			$(".forkit").fadeOut("fast");
-		}
 	});
 	
 	// photo的特殊效果
