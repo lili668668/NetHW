@@ -384,10 +384,8 @@ video {
         left: 10%;
         text-align: left;
     }  
-    video {
-        display: none;
-    }
-    div.text {
-        display: none;
-    }
+    
+    div.content p {
+		font-size: 15px;
+	}
 }
