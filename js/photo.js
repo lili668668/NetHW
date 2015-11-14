@@ -5,6 +5,9 @@ $(document).ready(function(){
 	$("#button").click(function(){
 		window.open("index.html", "_self");
 	});
+	if ($('body').height()>480) {
+		$(".img-content").remove();
+	}
 	
 	/*//////////////////////////////////*/
     $('#slides1').cycle({ 
