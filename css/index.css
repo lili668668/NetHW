@@ -326,16 +326,14 @@ video {
         width: 100%;
         height: 600px;
     }
-    #photo {
-        position: relative;
-        width: 100%;
-        height: 600px;
-    }
-    #video {
-        position: relative;
-        width: 100%;
-        height: 600px;
-    }
+	#photo-video {
+		display: none;
+	}
+    
+	#HTphoto {
+		display: none;
+	}
+	
 }
 
 @media only screen and (max-width: 595px) {
