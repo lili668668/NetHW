@@ -290,6 +290,16 @@ video {
     height: 600px;
 }
 
+.game-block {
+	display: inline-block;
+	width: 50%;
+	float: left;
+}
+
+.game-img {
+	width: 50%;
+}
+
 #subLayout1 {
     background-image: url(../photo/fix/p7.jpg);
 }
