@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html manifest="./site.appcache">
+<html>
 <head>
 <meta charset="utf-8">
-<title>天竺鼠對對碰</title>
+<title>BrowserPairs - Foxmosa - MozTW</title>
 <meta name="apple-touch-fullscreen" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -54,19 +54,17 @@
 <!-- CSS GitHub ribbon http://people.mozilla.com/~jbalogh/ribbon/ribbon.html -->
 <div class="right ribbon-holder">
     <a target="_blank" href="../index.html" class="red ribbon">
-        <span class="text">點我連結回溫暖的家</span>
+        <span class="text">go back to homepage</span>
     </a>
 </div>
       
 <article id="game">
 	<header id="gameStats">
-		<a id="qrcode" href="#codebox">QRCODE</a>
 		<p id="reset">Reset &raquo;</p>
 		<p id="gameScore">
 			Click: <span id="click">0</span>
 			Time: <span id="timer">0</span>
 		</p>
-		<a id="credit" href="#creditbox">Credit</a>
 		<p class="baritem" id="mute">Music</p>
 		<p class="baritem" id="fullscreen">FullScreen</p>
 	</header>
@@ -78,15 +76,15 @@
       </div> <!-- .card -->
     </div> <!-- #cards -->
 	  <div id="gameIntro">
-		  <div id="gamePlay">0%</div>
+		  <div id="gamePlay"></div>
+		  <div id="gamePlaySection"></div>
     </div>
     <div id="gameComplete">
       <div id="result">
         <p id="score"></p>
-        <p id="share"><a class="share-button facebook-share-button" href="#" target="_blank" title="Publish message to your Facebook wall">Post on Facebook</a><a class="share-button plurk-share-button" href="#" target="_blank" title="Post to Plurk">Plurk</a>
-  </p>
       </div>
-      <p><a id="gameAgain" class="button" href="#">Play again</a></p>
+      <p><a id="gameAgain-Hard" class="buttonHard" href="#">Play Again Hard</a></p>
+      <p><a id="gameAgain-Easy" class="buttonEasy" href="#">Play Again Easy</a></p>
     </div>
   </section>
 </article> <!-- #game -->

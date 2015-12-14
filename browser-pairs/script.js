@@ -17,11 +17,13 @@ var uiScore = $("#gameScore");
 var uiTime = $("#time");
 var uiClick = $("#click");
 var uiPlay = $("#gamePlay");
-var uiAgain = $("#gameAgain");
+var uiAgainHard = $("#gameAgain-Hard");
+var uiAgainEasy = $("#gameAgain-Easy");
 var uiTimer = $("#timer");
 var uiSplash = $("#splash");
 var uiFullscreen = $("#fullscreen");
 var decent = styleSupport('transition');
+var uiEasyGame = $("#gamePlaySection");
 
 //create deck array
 var matchingGame = {};
@@ -37,16 +39,30 @@ matchingGame.deck = [
 'fm', 'fm-icon'
 ];
 
+var matchingEasyGame = {};
+matchingEasyGame.deck = [
+'ie', 'ie',
+'fx', 'fx',
+'cr', 'cr',
+'sf', 'sf',
+'op', 'op',
+'ns', 'ns',
+'ms', 'ms',
+'tb', 'tb',
+'fm', 'fm'
+];
+
 matchingGame.clone = $.extend(true, [], matchingGame.deck);
+matchingEasyGame.clone = $.extend(true, [], matchingEasyGame.deck);
 
 //on document load the lazy way
 $(function(){
 	var loader = new PxLoader();
-	loader.addImage('images/start.png');
-	loader.addImage('images/end.png');
+	loader.addImage('images/nn/game-start2.jpg');
+	loader.addImage('images/nn/Win.jpg');
 	loader.addImage('images/card.png');
-	loader.addImage('images/left.png');
-	loader.addImage('images/right.png');
+	loader.addImage('images/nn/nn-no-background-so.png');
+	loader.addImage('images/nn/gg-no-background.png');
 	loader.addImage('images/logo.jpg');
 	loader.addImage('images/nn/小黃瓜1.jpg');
 	loader.addImage('images/nn/小黃瓜2.jpg');
@@ -66,13 +82,14 @@ $(function(){
 	loader.addImage('images/nn/戴柚子2.jpg');
 	loader.addImage('images/nn/籠子1.jpg');
 	loader.addImage('images/nn/籠子2.jpg');
-	loader.addProgressListener(function(e) {
+	/*loader.addProgressListener(function(e) {
 		if (e.completedCount * 5 < 100) {
 			uiPlay.text(e.completedCount * 4 + '%');
 		}
-	});
+	});*/
 	loader.addCompletionListener(function() {
-		uiPlay.text('Play');
+		uiPlay.text('Hard');
+        uiEasyGame.text('Easy');
 		ui.addClass('open');
 	});
 	loader.start();
@@ -90,9 +107,18 @@ function init() {
 		ui.removeClass("open");
 		startGame();
 	});
-	uiAgain.click(function(e) {
+    uiEasyGame.click(function(e) {
+        e.preventDefault();
+		ui.removeClass("open");
+		startEasyGame();
+	});
+	uiAgainHard.click(function(e) {
 		e.preventDefault();
 		reStartGame();
+	});
+    uiAgainEasy.click(function(e) {
+        e.preventDefault();
+		reStartEasyGame();
 	});
 	uiReset.click(function(e) {
 		e.preventDefault();
@@ -162,6 +188,40 @@ function startGame() {
 			});
 			// get a pattern from the shuffled deck
 			var pattern = matchingGame.deck.pop();
+			// visually apply the pattern on the card's back side.
+			$(this).find(".back").addClass(pattern);
+			// embed the pattern data into the DOM element.
+			$(this).attr("data-pattern",pattern.substr(0,2));
+			// listen the click event on each card DIV element.
+			$(this).click(selectCard);
+		});
+		playSound('intro');
+		timer();
+	}
+}
+
+function startEasyGame() {
+	ui.addClass('play');
+	uiTime.text("0");
+	uiClick.text("0");
+	score = 0;
+	cardsmatched = 0;
+	clicks = 0;
+	if (playGame == false) {
+		playGame = true;
+		$.shuffle(matchingEasyGame.deck.sort(function(){return 0.5 - Math.random();}));
+		for(var i=0;i<17;i++){
+			$(".card:first-child").clone().appendTo("#cards");
+		}
+		// initialize each card's position初始化每個卡的位置
+		uiCards.children().each(function(index) {
+			// align the cards to be 3x6 ourselves.
+			$(this).css({
+				"left" : ($(this).width() + 20) * (index % 6),
+				"top" : ($(this).height() + 20) * Math.floor(index / 6)
+			});
+			// get a pattern from the shuffled deck
+			var pattern = matchingEasyGame.deck.pop();
 			// visually apply the pattern on the card's back side.
 			$(this).find(".back").addClass(pattern);
 			// embed the pattern data into the DOM element.
@@ -303,6 +363,18 @@ function reStartGame(){
 	clearTimeout(scoreTimeout);
 	matchingGame.deck = $.extend(true, [], matchingGame.clone);
 	startGame();
+}
+
+function reStartEasyGame(){
+	ui.removeClass('end');
+	$('.matched').removeClass('current');
+	uiSplash.removeClass('matchend');
+	uiSplash.find('span').removeClass('matched');
+	playGame = false;
+	uiCards.html("<div class='card'><div class='face front'></div><div class='face back'></div></div>");
+	clearTimeout(scoreTimeout);
+	matchingEasyGame.deck = $.extend(true, [], matchingEasyGame.clone);
+	startEasyGame();
 }
 
 function closebox(ev) {
